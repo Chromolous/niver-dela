@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import yipe from '../assets/yipee.m4a'
-import boom from '../assets/boom.m4a'
+import boom from '../assets/BOOM.m4a'
 
 const isOpen = ref(false)
 const temConfete = ref(false)
