@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import yipe from '../assets/yipee.m4a'
-import boom from '../assets/boom.m4a'
+import boom from '../assets/BOOM.m4a'
 
 const isOpen = ref(false)
 const temConfete = ref(false)
@@ -51,7 +51,9 @@ function prox_pagina() {
     }
 }
 
-const mensagem1 = `Oi Carla, quanto tempo né? Se pa você ta meio perdida, mas vai fazer sentido (eu acho).
+const mensagem1 = `Oi Carla, quanto tempo né?
+Deve estar achando isso meio nada a ver, mas vai fazer sentido (eu acho).
+
 Primeiramente, parabéns pelo o seu dia! 17 anos? Me perdi na conta.
 A gente era criança quando nos conhecemos e agora eu to me sentindo um velho.
 "Ai mas você sempre foi meio idoso" fala isso na minha cara, covarde.`.split('')
@@ -64,9 +66,11 @@ Sendo assim...
 const mensagem3 = `EU NÃO DISSE NADA!!!`
 
 const mensagem4 = `Quando eu tomei block eu fui procurar saber o que tinha acontecido, e me falaram que a praga do Davi espalhou
+
 MENTIRAS
 DESINFORMAÇÃO
 CALÚNIAS 
+
 sobre coisas que eu falei ou deixei de falar, e imaginei que esse tivesse sido o motivo para acontecer o que aconteceu.
 `
 
@@ -79,24 +83,32 @@ E já que a gente parou de se falar, eu queria pelo menos fazer isso de um jeito
 `
 
 const mensagem7 = `É fato que ambos já participamos consideravelmente da vida um do outro, seja por bem ou por mal,
-e é por isso que eu gostaria que tivessemos boas memórias um do outro.
+e é por isso que eu gostaria que pelo menos tivessemos boas memórias um do outro.
+
 Pensando nisso eu...
 bom
 er
 meio que tipo assim
+
 eu ia fazer um mega compilado de coisas nossas (fotos, vídeos, mensagens e etc)
 mas como eu sou um procrastinador top 10 eu acabei deixando pra depois e esquecendo.
 ops.
 `
 
 const mensagem8 = `MAS DE QUALQUER FORMA
-Sinto muito por todos os momentos ruins e queria te agradecer por todos os momentos bons que você proporcionou.
+Sinto muito por todos os momentos ruins, de discussões, egoísmo e babaquísse da minha parte.
+
+E queria te agradecer por todos os momentos bons que você proporcionou!
+Agradecer pelas risadas, pelas gameplays de qualidade duvidosa, e basicamente por deixar o meu dia mais leve.
+Sua amizade sempre foi mais do que eu merecia.
+
 Você é uma menina muito dedicada, talentosa, gentil e eu até poderia ficar citando todas as suas qualidades,
-mas aí você teria que ficar clicando nesse botão de continuar por um tempinho.
+mas aí você teria que ficar clicando nesse botão de continuar por um tempinho rs.
 `
 
-const mensagem9 = `Acho que é mais ou menos isso, essa provavelmente é a minha última mensagem pra você (ou pelo menos uma das últimas)
-Tchau Cah! Fica bem, espero todo sucesso do mundo pra você!
+const mensagem9 = `Acho que é mais ou menos isso, essa provavelmente é a minha última mensagem pra você, ou pelo menos uma das últimas.
+
+Tchau Cah! Fica bem e desejo todo o sucesso do mundo pra você.
 `
 
 </script>
@@ -111,7 +123,7 @@ Tchau Cah! Fica bem, espero todo sucesso do mundo pra você!
     <div class="relative z-1 flex flex-col items-center justify-center h-full">
         <h1 v-if="page == 0" class="text-neutral-200 z-10">FELIZ ANIVERSÁRIO</h1>
 
-        <div v-if="page == 1" class="bg-black/20 w-16/20 h-fit rounded-lg py-2 px-2 mb-5">
+        <div v-if="page == 1" class="bg-black/20 w-12/20 h-fit rounded-lg py-2 px-2 mb-5">
             <p class="text-neutral-200">
                 <template v-for="(char, index) in mensagem1" :key="index">
                     <br v-if="char === '\n'" />
@@ -122,7 +134,7 @@ Tchau Cah! Fica bem, espero todo sucesso do mundo pra você!
             </p>
         </div>
 
-        <div v-if="page == 2" class="bg-black/20 w-16/20 h-fit rounded-lg py-2 px-2 mb-5">
+        <div v-if="page == 2" class="bg-black/20 w-12/20 h-fit rounded-lg py-2 px-2 mb-5">
             <p class="text-neutral-200">
                 <template v-for="(char, index) in mensagem2" :key="index">
                     <br v-if="char === '\n'" />
@@ -137,7 +149,7 @@ Tchau Cah! Fica bem, espero todo sucesso do mundo pra você!
             {{mensagem3}}
         </h1>
 
-        <div v-if="page == 4" class="bg-black/20 w-16/20 h-fit rounded-lg py-2 px-2 mb-5">
+        <div v-if="page == 4" class="bg-black/20 w-12/20 h-fit rounded-lg py-2 px-2 mb-5">
             <p class="text-neutral-200">
                 <template v-for="(char, index) in mensagem4" :key="index">
                     <br v-if="char === '\n'" />
@@ -148,7 +160,7 @@ Tchau Cah! Fica bem, espero todo sucesso do mundo pra você!
             </p>
         </div>
 
-        <div v-if="page == 5" class="bg-black/20 w-16/20 h-fit rounded-lg py-2 px-2 mb-5">
+        <div v-if="page == 5" class="bg-black/20 w-12/20 h-fit rounded-lg py-2 px-2 mb-5">
             <p class="text-neutral-200">
                 <template v-for="(char, index) in mensagem5" :key="index">
                     <br v-if="char === '\n'" />
@@ -159,7 +171,7 @@ Tchau Cah! Fica bem, espero todo sucesso do mundo pra você!
             </p>
         </div>
 
-        <div v-if="page == 6" class="bg-black/20 w-16/20 h-fit rounded-lg py-2 px-2 mb-5">
+        <div v-if="page == 6" class="bg-black/20 w-12/20 h-fit rounded-lg py-2 px-2 mb-5">
             <p class="text-neutral-200">
                 <template v-for="(char, index) in mensagem6" :key="index">
                     <br v-if="char === '\n'" />
@@ -170,7 +182,7 @@ Tchau Cah! Fica bem, espero todo sucesso do mundo pra você!
             </p>
         </div>
 
-        <div v-if="page == 7" class="bg-black/20 w-16/20 h-fit rounded-lg py-2 px-2 mb-5">
+        <div v-if="page == 7" class="bg-black/20 w-12/20 h-fit rounded-lg py-2 px-2 mb-5">
             <p class="text-neutral-200">
                 <template v-for="(char, index) in mensagem7" :key="index">
                     <br v-if="char === '\n'" />
@@ -181,7 +193,7 @@ Tchau Cah! Fica bem, espero todo sucesso do mundo pra você!
             </p>
         </div>
 
-        <div v-if="page == 8" class="bg-black/20 w-16/20 h-fit rounded-lg py-2 px-2 mb-5">
+        <div v-if="page == 8" class="bg-black/20 w-14/20 h-fit rounded-lg py-2 px-2 mb-5">
             <p class="text-neutral-200">
                 <template v-for="(char, index) in mensagem8" :key="index">
                     <br v-if="char === '\n'" />
@@ -192,7 +204,7 @@ Tchau Cah! Fica bem, espero todo sucesso do mundo pra você!
             </p>
         </div>
 
-        <div v-if="page == 9" class="bg-black/20 w-16/20 h-fit rounded-lg py-2 px-2 mb-5">
+        <div v-if="page == 9" class="bg-black/20 w-12/20 h-fit rounded-lg py-2 px-2 mb-5">
             <p class="text-neutral-200">
                 <template v-for="(char, index) in mensagem9" :key="index">
                     <br v-if="char === '\n'" />
@@ -204,9 +216,11 @@ Tchau Cah! Fica bem, espero todo sucesso do mundo pra você!
         </div>
 
         <h1 v-if="page == 10" class="text-neutral-200 font-bold">
-            <span class="inline-block opacity-0 animate-fadeIn" :style="{ animationDelay: 0.1 + 's' }">
-                Feito com ❤ por "Jossoares" (ou "jossoaris?")
+            <span class="opacity-0 animate-fadeIn" :style="{ animationDelay: 0.1 + 's' }">
+                Feito com ❤ por Jossoares
             </span>
+            <br>
+            <span class="opacity-0 animate-fadeIn" :style="{ animationDelay: 0.5 + 's' }" style="font-size:20px">(ou "Jossoaris"?)</span>
         </h1>
         
         <button v-if="page < 10" @click="prox_pagina()" class="bg-white opacity-85 rounded-xl px-6 py-3 shadow-lg hover:cursor-pointer active:scale-90 transition duration-100">
