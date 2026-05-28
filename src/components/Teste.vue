@@ -53,6 +53,8 @@ function abrePresente() {
 
 //const mensagem1 = ``.split('');
 
+// PQ NAO FUNCINOA 😫😫😫😫
+
 </script>
 
 <template>
