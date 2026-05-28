@@ -56,7 +56,8 @@ function prox_pagina() {
 }
 
 const mensagem1 = `Feliz aniversário ma sœur (é assim mesmo?), tamo J
-Infelizmente não vou estar aí, mas vamo ve essa meta aí`.split('');
+Infelizmente não vou estar aí esse ano, mas vamo ve essa meta aí
+love u`.split('');
 
 </script>
 
