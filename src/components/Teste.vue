@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import yipe from '../assets/yipee.m4a'
 import boom from '../assets/BOOM.m4a'
+import aniversariu from '../assets/aniversariu.m4a'
 
 const isOpen = ref(false)
 const temConfete = ref(false)
@@ -40,20 +41,22 @@ function abrePresente() {
     
 }
 
-// function prox_pagina() {
-//     page.value++
-//     if (page.value == 3) {
-//         new Audio(boom).play();
-//     }
-//     if (page.value == 10) {
-//         new Audio(yipe).play();
+function prox_pagina() {
+    page.value++
+    if (page.value == 3) {
+        new Audio(boom).play();
+    }
+    if (page.value == 1) {
+        new Audio(aniversariu).play();
+    }
+    if (page.value == 2) {
+        new Audio(yipe).play();
 
-//     }
-// }
+    }
+}
 
-//const mensagem1 = ``.split('');
-
-// PQ NAO FUNCINOA 😫😫😫😫
+const mensagem1 = `Feliz aniversário ma sœur (é assim mesmo?), tamo J
+Infelizmente não vou estar aí, mas vamo ve essa meta aí`.split('');
 
 </script>
 
@@ -66,6 +69,29 @@ function abrePresente() {
 
     <div class="relative z-1 flex flex-col items-center justify-center h-full">
         <h1 v-if="page == 0" class="text-neutral-200 z-10">FELIZ ANIVERSÁRIO</h1>
+
+        <div v-if="page == 1" class="bg-black/20 w-12/20 h-fit rounded-lg py-2 px-2 mb-5">
+            <p class="text-neutral-200">
+                <template v-for="(char, index) in mensagem1" :key="index">
+                    <br v-if="char === '\n'" />
+                    <span v-else class="inline-block opacity-0 animate-fadeIn" :style="{ animationDelay: index * 0.01 + 's' }">
+                        {{ char === ' ' ? '\u00A0' : char }}
+                    </span>
+                </template>
+            </p>
+        </div>
+
+        <h1 v-if="page == 2" class="text-neutral-200 font-bold">
+            <span class="opacity-0 animate-fadeIn" :style="{ animationDelay: 0.1 + 's' }">
+                Feito com ❤ por lele11458
+            </span>
+            <br>
+            <span class="opacity-0 animate-fadeIn" :style="{ animationDelay: 0.5 + 's' }" style="font-size:20px">(AKA eu mesmo)</span>
+        </h1>
+        
+        <button v-if="page < 2" @click="prox_pagina()" class="bg-white opacity-85 rounded-xl px-6 py-3 shadow-lg hover:cursor-pointer active:scale-90 transition duration-100">
+            Continuar...
+        </button>
     </div>
 
     <!--E tome confete-->
