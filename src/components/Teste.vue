@@ -55,9 +55,11 @@ function prox_pagina() {
     }
 }
 
-const mensagem1 = `Feliz aniversário ma sœur (é assim mesmo?), tamo J
-Infelizmente não vou estar aí esse ano, mas vamo ve essa meta aí
-love u`.split('');
+const mensagem1 = `Feliz aniversário "dona"
+Seu dia pode não estar sendo tão bom mas espero que melhore!
+Tmj Lívia 1, mais tarde a gente faz uma gameplay maneira`.split('');
+const mensagem2 = `LEMBRA DE COLOCAR MOCHILA NO BAGUI
+E me ensina a mexer com o IM (se quiser, se não quiser vai tomar no cu (mentira vai tomar no cu nao, é meme <3))`.split('');
 
 </script>
 
@@ -82,15 +84,26 @@ love u`.split('');
             </p>
         </div>
 
-        <h1 v-if="page == 2" class="text-neutral-200 font-bold">
+      <div v-if="page == 2" class="bg-black/20 w-10/20 h-fit rounded-lg py-2 px-2 mb-5">
+            <p class="text-neutral-200">
+                <template v-for="(char, index) in mensagem2" :key="index">
+                    <br v-if="char === '\n'" />
+                    <span v-else class="inline-block opacity-0 animate-fadeIn" :style="{ animationDelay: index * 0.01 + 's' }">
+                        {{ char === ' ' ? '\u00A0' : char }}
+                    </span>
+                </template>
+            </p>
+        </div>
+
+        <h1 v-if="page == 3" class="text-neutral-200 font-bold">
             <span class="opacity-0 animate-fadeIn" :style="{ animationDelay: 0.1 + 's' }">
-                Feito com ❤ por lele11458
+                Feito com ❤ por Torakka
             </span>
             <br>
-            <span class="opacity-0 animate-fadeIn" :style="{ animationDelay: 0.5 + 's' }" style="font-size:20px">(AKA eu mesmo)</span>
+            <span class="opacity-0 animate-fadeIn" :style="{ animationDelay: 0.5 + 's' }" style="font-size:20px">(Vulgo eu mesmo)</span>
         </h1>
         
-        <button v-if="page < 2" @click="prox_pagina()" class="bg-white opacity-85 rounded-xl px-6 py-3 shadow-lg hover:cursor-pointer active:scale-90 transition duration-100">
+        <button v-if="page < 3" @click="prox_pagina()" class="bg-white opacity-85 rounded-xl px-6 py-3 shadow-lg hover:cursor-pointer active:scale-90 transition duration-100">
             Continuar...
         </button>
     </div>
